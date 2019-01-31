@@ -1,9 +1,4 @@
 <?php
-/* -------------------------
-  Autor: Obed Alvarado
-  Web: obedalvarado.pw
-  Mail: info@obedalvarado.pw
-  --------------------------- */
 
 /* Connect To Database */
 require_once ("config/db.php"); //Contiene las variables de configuracion para conectar a la base de datos
