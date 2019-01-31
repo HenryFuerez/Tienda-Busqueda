@@ -1,7 +1,7 @@
 <div class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
       <p class="navbar-text pull-left"> Catálogo de Productos <?php echo date('Y');?> - AMAZON UTN.
-           <a href="" target="_blank" style="color: #ecf0f1">Gracias por Visitarnos</a>
+           <a href="" target="_blank" style="color: #ecf0f1">Gracias por su Visita</a>
       </p>
    </div>
 </div>
