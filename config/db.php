@@ -12,13 +12,5 @@ define('TELEFONO_EMPRESA', '+(503) 0968061259');
 define('EMAIL_EMPRESA', 'proyecto.appinf@utn.edu.ec');
 define('TAX', '12');
 
-/*-------------------------------------------------
-Los datos por defecto del usuario administrador son:
-#usuario: admin
-#contraseña: admin
-Los datos de inicio de sesion podran ser modificados 
-desde el panel de control del sistema
----------------------------------------------------*/
-
 
 ?>
