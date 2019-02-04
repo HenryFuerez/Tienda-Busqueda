@@ -3,35 +3,7 @@ require_once ("../config/db.php"); //Contiene las variables de configuracion par
 require_once ("../config/conexion.php"); //Contiene funcion que conecta a la base de datos
 
 $action = (isset($_REQUEST['action']) && $_REQUEST['action'] != NULL) ? $_REQUEST['action'] : '';
-if (isset($_GET['id'])) {
-    $id_producto = intval($_GET['id']);
-    $query = mysqli_query($con, "select * from detalle_cotizacion_demo where id_producto='" . $id_producto . "'");
-    $count = mysqli_num_rows($query);
-    if ($count == 0) {
-        if ($delete1 = mysqli_query($con, "DELETE FROM products WHERE id_producto='" . $id_producto . "'")) {
-            ?>
-            <div class="alert alert-success alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong>Aviso!</strong> Datos eliminados exitosamente.
-            </div>
-            <?php
-        } else {
-            ?>
-            <div class="alert alert-danger alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <strong>Error!</strong> Lo siento algo ha salido mal intenta nuevamente.
-            </div>
-            <?php
-        }
-    } else {
-        ?>
-        <div class="alert alert-danger alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <strong>Error!</strong> No se pudo eliminar éste  producto. Existen cotizaciones vinculadas a éste producto. 
-        </div>
-        <?php
-    }
-}
+
 if ($action == 'ajax') {
     // escaping, additionally removing everything that could be (html/javascript-) code
     $q = mysqli_real_escape_string($con, (strip_tags($_REQUEST['q'], ENT_QUOTES)));
